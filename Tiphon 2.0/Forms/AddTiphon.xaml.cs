@@ -32,6 +32,7 @@ namespace Tiphon_2._0.Forms
             Product.Id = Guid.NewGuid();
         }
 
+
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
             Metods.Metod.AddProduct (Product.Id, Product.Name, Product.Price, Product.Description);
@@ -41,14 +42,6 @@ namespace Tiphon_2._0.Forms
 
         }
 
-        private void btn_madeQr_Click(object sender, RoutedEventArgs e)
-        {
-            QRCodeGenerator qrGenerator = new();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(tb_id.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qr = qrCode.GetGraphic(150);
-            qr_im.Source = Convert(qr);
-        }
         public BitmapImage Convert(Bitmap src)
         {
             MemoryStream ms = new MemoryStream();

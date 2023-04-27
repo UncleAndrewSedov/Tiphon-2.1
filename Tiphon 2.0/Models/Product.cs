@@ -14,6 +14,7 @@ namespace Tiphon_2._0.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
-        [NotMapped] BitmapImage QrCode { get; set; }
+        [NotMapped]
+        public BitmapImage QrCode { get; set; }
     }
 }

@@ -28,8 +28,8 @@
                             <TextBlock Text="{Binding Path=Price}"/>
                             <TextBlock Text="Описание"/>
                             <TextBlock Text="{Binding Path=Description}"/>
-                            <TextBlock Text="QR"/>
-                            <Image Source="{Binding Path=Description}" Width="100" Height="100"/>
+                            <TextBlock Text="QrCode"/>
+                            <Image Source="{Binding Path=QrCode}" Width="100" Height="100"/>
 
                         </StackPanel>
                     </DataTemplate>

@@ -35,15 +35,7 @@ namespace Tiphon_2._0.Forms
         {
             DialogResult = true;
             Close();
-        }
-
-        private void btn_madeQr_Click(object sender, RoutedEventArgs e)
-        {
-            QRCodeGenerator qrGenerator = new();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode(tb_id.Text, QRCodeGenerator.ECCLevel.Q);
-            QRCode qrCode = new QRCode(qrCodeData);
-            Bitmap qr = qrCode.GetGraphic(150);
-            qr_im.Source = Convert(qr);
+            
         }
         public BitmapImage Convert(Bitmap src)
         {
